@@ -11,16 +11,16 @@ using System.Data.SqlClient;
 
 namespace Lab03
 {
-    public partial class Persona : Form
+    public partial class Cursos : Form
     {
         SqlConnection conn;
-        public Persona(SqlConnection conn)
+        public Cursos(SqlConnection conn)
         {
             this.conn = conn;
             InitializeComponent();
         }
 
-        private void Persona_Load(object sender, EventArgs e)
+        private void Cursos_Load(object sender, EventArgs e)
         {
 
         }
@@ -29,14 +29,14 @@ namespace Lab03
         {
             if (conn.State == ConnectionState.Open)
             {
-                String sql = "select * from Person";
-                SqlCommand cmd = new SqlCommand(sql,conn);
+                String sql = "select * from Course";
+                SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 DataTable dt = new DataTable();
                 dt.Load(reader);
-                dgvListado.DataSource = dt;
-                dgvListado.Refresh();
+                dgvListadoCursos.DataSource = dt;
+                dgvListadoCursos.Refresh();
             }
             else
             {
@@ -48,14 +48,14 @@ namespace Lab03
         {
             if (conn.State == ConnectionState.Open)
             {
-                String FirstName = txtNombre.Text;
+                String FirstName = txtTitle.Text;
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = "BuscarPersonaNombre";
+                cmd.CommandText = "BuscarCursoNombre";
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Connection = conn;
 
                 SqlParameter param = new SqlParameter();
-                param.ParameterName = "@FirstName";
+                param.ParameterName = "@Title";
                 param.SqlDbType = SqlDbType.NVarChar;
                 param.Value = FirstName;
 
@@ -64,8 +64,8 @@ namespace Lab03
                 SqlDataReader reader = cmd.ExecuteReader();
                 DataTable dt = new DataTable();
                 dt.Load(reader);
-                dgvListado.DataSource = dt;
-                dgvListado.Refresh();
+                dgvListadoCursos.DataSource = dt;
+                dgvListadoCursos.Refresh();
             }
             else
             {

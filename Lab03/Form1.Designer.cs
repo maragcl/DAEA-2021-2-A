@@ -42,6 +42,7 @@ namespace Lab03
             this.btnEstado = new System.Windows.Forms.Button();
             this.btnDesconectar = new System.Windows.Forms.Button();
             this.btnPersonas = new System.Windows.Forms.Button();
+            this.btnCursos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblServidor
@@ -69,7 +70,7 @@ namespace Lab03
             this.txtBaseDatos.Name = "txtBaseDatos";
             this.txtBaseDatos.Size = new System.Drawing.Size(162, 22);
             this.txtBaseDatos.TabIndex = 3;
-            this.txtBaseDatos.Text = "db_lab03";
+            this.txtBaseDatos.Text = "School";
             this.txtBaseDatos.TextChanged += new System.EventHandler(this.txtBaseDatos_TextChanged);
             // 
             // lblBase
@@ -173,11 +174,22 @@ namespace Lab03
             this.btnPersonas.UseVisualStyleBackColor = true;
             this.btnPersonas.Click += new System.EventHandler(this.btnPersonas_Click);
             // 
+            // btnCursos
+            // 
+            this.btnCursos.Location = new System.Drawing.Point(294, 274);
+            this.btnCursos.Name = "btnCursos";
+            this.btnCursos.Size = new System.Drawing.Size(112, 36);
+            this.btnCursos.TabIndex = 13;
+            this.btnCursos.Text = "Cursos";
+            this.btnCursos.UseVisualStyleBackColor = true;
+            this.btnCursos.Click += new System.EventHandler(this.btnCursos_Click);
+            // 
             // frmConDb
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(458, 337);
+            this.Controls.Add(this.btnCursos);
             this.Controls.Add(this.btnPersonas);
             this.Controls.Add(this.btnDesconectar);
             this.Controls.Add(this.btnEstado);
@@ -214,6 +226,7 @@ namespace Lab03
         private System.Windows.Forms.Button btnEstado;
         private System.Windows.Forms.Button btnDesconectar;
         private System.Windows.Forms.Button btnPersonas;
+        private System.Windows.Forms.Button btnCursos;
     }
 }
 

@@ -144,5 +144,11 @@ namespace Lab03
             Persona persona = new Persona(conn);
             persona.Show();
         }
+
+        private void btnCursos_Click(object sender, EventArgs e)
+        {
+            Cursos curso = new Cursos(conn);
+            curso.Show();
+        }
     }
 }
