@@ -1,0 +1,10 @@
+LAPTOP-AOPQJ586\SQLEXPRESS
+
+executeReader: Retorna varios valores
+ExecutenoQuery: No retorna
+executescalar:retorna 1 valor "count"
+
+
+//Server=DESKTOP-SPBKV34\\LOCAL;DataBase=db_lab03;Integrated Security=true
+
+Server=LAPTOP-AOPQJ586\\SQLEXPRESS;DataBase=db_lab03;Integrated Security=true
